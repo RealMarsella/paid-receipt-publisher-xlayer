@@ -1,0 +1,163 @@
+{
+  "generatedAt": "2026-05-21T01:05:23.643Z",
+  "project": "Paid Receipt Publisher",
+  "chainRoot": "0x100863767a2c8b6197554790568c81bab1e2b6344a0b646d8f9ddc8d4b350228",
+  "receipts": [
+    {
+      "id": "rcpt-payment-001",
+      "kind": "payment",
+      "agent": "buyer.agent.gabriel",
+      "counterparty": "research-skill.vendor",
+      "amount": "0.0100",
+      "asset": "USDC",
+      "network": "xlayer-testnet",
+      "policy": "approved: under 0.05 USDC cap and known vendor",
+      "memo": "Paid data request receipt prepared for x402-style service access.",
+      "timestamp": "2026-05-21T01:05:23.643Z",
+      "externalAction": {
+        "label": "x402 service payment",
+        "status": "prepared",
+        "txHash": null,
+        "url": null,
+        "blocker": "No authorized x402 wallet key in this session."
+      },
+      "previousHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "receiptHash": "0xff3304b34d629358cf14e756d1efaa89df80f2533fcb392d409b4a1a1c717632",
+      "signature": {
+        "scheme": "ed25519",
+        "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAGLeEvqBD+6yR2ZHHeXDfqXJJ3zpKClVWIGmVGoO8xP8=\n-----END PUBLIC KEY-----\n",
+        "valueBase64": "WSj82MXejGcTd8G+gwWb22mBZ0Mdp81pmIxKjhv021PrrT2R1dzbRgVl2H1hXpngkQyXjhbJNjEEgzo95wX2BQ=="
+      }
+    },
+    {
+      "id": "rcpt-swap-001",
+      "kind": "swap",
+      "agent": "router.agent.gabriel",
+      "counterparty": "okx-dex-route",
+      "amount": "0.0025",
+      "asset": "OKB",
+      "network": "xlayer-mainnet",
+      "policy": "blocked: no wallet approval for live DEX route",
+      "memo": "Swap receipt records the intended route without inventing a transaction.",
+      "timestamp": "2026-05-21T01:05:23.643Z",
+      "externalAction": {
+        "label": "OKX DEX / Uniswap route",
+        "status": "blocked",
+        "txHash": null,
+        "url": null,
+        "blocker": "Connect wallet and approve route before publishing a swap receipt."
+      },
+      "previousHash": "0xff3304b34d629358cf14e756d1efaa89df80f2533fcb392d409b4a1a1c717632",
+      "receiptHash": "0xb01a211ca7160c1b25bd2bc1fea259f66ab2a78ca0fa3dfa6ff9c71429f67c75",
+      "signature": {
+        "scheme": "ed25519",
+        "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAGLeEvqBD+6yR2ZHHeXDfqXJJ3zpKClVWIGmVGoO8xP8=\n-----END PUBLIC KEY-----\n",
+        "valueBase64": "956X/WuQRjDDhbmHwLENAOwuVKiSbyLkjELtXCzGiCr74viV4AT0mAooX+Uwb6lg5l6ox1VG7pcDO461JHlqDQ=="
+      }
+    },
+    {
+      "id": "rcpt-denial-001",
+      "kind": "denial",
+      "agent": "policy.agent.gabriel",
+      "counterparty": "unknown-skill.vendor",
+      "amount": "0.2500",
+      "asset": "USDC",
+      "network": "xlayer-testnet",
+      "policy": "denied: exceeds skill spend cap and vendor is not allowlisted",
+      "memo": "Denial receipts make blocked autonomous spends auditable.",
+      "timestamp": "2026-05-21T01:05:23.643Z",
+      "externalAction": {
+        "label": "policy gate",
+        "status": "observed",
+        "txHash": null,
+        "url": null,
+        "blocker": null
+      },
+      "previousHash": "0xb01a211ca7160c1b25bd2bc1fea259f66ab2a78ca0fa3dfa6ff9c71429f67c75",
+      "receiptHash": "0x0ee94d1644aad52f078540ceed9bb86a7ef25dba6e3b34a31c74e25680a3b1fc",
+      "signature": {
+        "scheme": "ed25519",
+        "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAGLeEvqBD+6yR2ZHHeXDfqXJJ3zpKClVWIGmVGoO8xP8=\n-----END PUBLIC KEY-----\n",
+        "valueBase64": "P+0qnayGWsIqAcdncBbvsTw/fnMkKKYkWufzdFk6hYaGU7Dqc2Dx9fYv7q+BLtAoX8WXNryhIV45bOHxovEIBQ=="
+      }
+    },
+    {
+      "id": "rcpt-refund-001",
+      "kind": "refund",
+      "agent": "support.agent.gabriel",
+      "counterparty": "research-skill.vendor",
+      "amount": "0.0100",
+      "asset": "USDC",
+      "network": "xlayer-testnet",
+      "policy": "prepared: refund path available after failed SLA",
+      "memo": "Refund receipt links post-service remediation to the same proof chain.",
+      "timestamp": "2026-05-21T01:05:23.643Z",
+      "externalAction": {
+        "label": "refund transfer",
+        "status": "prepared",
+        "txHash": null,
+        "url": null,
+        "blocker": "Refund publish awaits funded test wallet."
+      },
+      "previousHash": "0x0ee94d1644aad52f078540ceed9bb86a7ef25dba6e3b34a31c74e25680a3b1fc",
+      "receiptHash": "0x9fc8ed05a2d73d29c8c3762e0b77dc52da2c26f4c8b5e9780f160d9e3d273013",
+      "signature": {
+        "scheme": "ed25519",
+        "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAGLeEvqBD+6yR2ZHHeXDfqXJJ3zpKClVWIGmVGoO8xP8=\n-----END PUBLIC KEY-----\n",
+        "valueBase64": "Bete8vCkMTwgDDBS/NXiLkbMM754LCGKZLVU6qf/ZyGFnLO3eLAUBIdSR9STQaCxaPWxA6+zrUFPyeuG2FlSBQ=="
+      }
+    },
+    {
+      "id": "rcpt-result-001",
+      "kind": "service_result",
+      "agent": "publisher.agent.gabriel",
+      "counterparty": "judge.proof.reader",
+      "amount": "0",
+      "asset": "N/A",
+      "network": "local-proof",
+      "policy": "settled-local: proof bundle generated and signature verified",
+      "memo": "Final receipt seals the local proof bundle before optional X Layer anchoring.",
+      "timestamp": "2026-05-21T01:05:23.643Z",
+      "externalAction": {
+        "label": "proof bundle export",
+        "status": "settled",
+        "txHash": null,
+        "url": "outputs/proof-bundle.json",
+        "blocker": null
+      },
+      "previousHash": "0x9fc8ed05a2d73d29c8c3762e0b77dc52da2c26f4c8b5e9780f160d9e3d273013",
+      "receiptHash": "0x100863767a2c8b6197554790568c81bab1e2b6344a0b646d8f9ddc8d4b350228",
+      "signature": {
+        "scheme": "ed25519",
+        "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAGLeEvqBD+6yR2ZHHeXDfqXJJ3zpKClVWIGmVGoO8xP8=\n-----END PUBLIC KEY-----\n",
+        "valueBase64": "AsaC5ytimCCts1b/NVMPt0/ucUDlYyFAkv53QzwOLWtaJnDvY3bUhXjQwMcXn1EKsn8dbZpi++zgcBSFEbvvCw=="
+      }
+    }
+  ],
+  "chainPublish": {
+    "status": "blocked",
+    "network": "xlayer-testnet",
+    "chainId": 1952,
+    "contractAddress": null,
+    "txHash": null,
+    "explorerUrl": null,
+    "blocker": "DEPLOYER_PRIVATE_KEY or Agentic Wallet authorization is required for writes."
+  },
+  "liveReadProof": [
+    {
+      "command": "cast chain-id --rpc-url https://testrpc.xlayer.tech/terigon",
+      "result": "1952",
+      "observedAt": "2026-05-21T06:00:31+05:30"
+    },
+    {
+      "command": "cast block-number --rpc-url https://testrpc.xlayer.tech/terigon",
+      "result": "30864734",
+      "observedAt": "2026-05-21T06:00:31+05:30"
+    },
+    {
+      "command": "cast chain-id --rpc-url https://xlayerrpc.okx.com",
+      "result": "196",
+      "observedAt": "2026-05-21T06:00:31+05:30"
+    }
+  ]
+}
